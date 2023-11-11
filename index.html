@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced POS System</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="pos">
+        <h2>Advanced POS System</h2>
+        <input type="text" id="productSearch" placeholder="Search products..." onkeyup="searchProducts()">
+        <div id="products">
+            <!-- Products will be added here dynamically -->
+        </div>
+        <div id="cart">
+            <h3>Cart</h3>
+            <ul id="cartItems">
+                <!-- Cart items will be listed here -->
+            </ul>
+            <p>Total: $<span id="total">0.00</span></p>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+    <div id="adminPanel">
+        <h2>Admin Panel</h2>
+        <input type="text" id="newProductName" placeholder="Product Name">
+        <input type="number" id="newProductPrice" placeholder="Product Price">
+        <button onclick="addNewProduct()">Add New Product</button>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database.js"></script>
+</body>
+</html>
